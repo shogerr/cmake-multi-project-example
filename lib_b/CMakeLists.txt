@@ -8,15 +8,15 @@ if(DEFINED ENV{VCPKG_ROOT} AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
   set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
 endif()
 
-project(LibA LANGUAGES CXX)
+project(LibB LANGUAGES CXX)
 
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
   set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR} CACHE PATH "Set install prefix to project source folder." FORCE)
 endif(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 
-set(LIB_TARGET_NAME LibALib)
-add_library(${LIB_TARGET_NAME} INTERFACE)
-target_include_directories(${LIB_TARGET_NAME} INTERFACE
+set(LIB_TARGET_NAME LibBLib)
+add_library(${LIB_TARGET_NAME} src/class_b.cpp)
+target_include_directories(${LIB_TARGET_NAME} PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
   )

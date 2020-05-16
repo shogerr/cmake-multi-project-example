@@ -1,7 +1,8 @@
 # CMake build directories
 build/
 **/build/
-
-# CMake module files
+# CMake module folders
 cmake/
 **/cmake/
+# CMake library installation location
+**/lib/

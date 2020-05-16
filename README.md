@@ -1,6 +1,10 @@
 CMake Multi-Project Example
 ===========================
 
+```powershell
+cmake -S . -B build
+```
+
 References
 ----------
 
