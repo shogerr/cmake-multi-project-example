@@ -18,7 +18,6 @@ ExternalProject_Add(LibA
 
 set(LibB_SOURCE_DIR ${PROJECT_SOURCE_DIR}/lib_b)
 list(APPEND CMAKE_PREFIX_PATH ${LibB_SOURCE_DIR}/cmake)
-include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
 ExternalProject_Add(LibB
   SOURCE_DIR ${LibB_SOURCE_DIR}
   )

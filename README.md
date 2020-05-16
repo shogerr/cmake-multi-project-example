@@ -5,6 +5,13 @@ CMake Multi-Project Example
 cmake -S . -B build
 ```
 
+Clean
+-----
+
+```powershell
+git clean -e .vscode/ -nfd
+```
+
 References
 ----------
 
